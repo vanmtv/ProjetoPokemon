@@ -1,25 +1,31 @@
-package pokemonAr;
+package Rpg;
 
-public class caterpie extends Pokemon{
-	
-		private String acao;
-		public cachorro() 
-		{
-			
-		}
-		public String getAcao() {
-			return acao;
-		}
-		public void setAcao(String acao) {
-			this.acao = acao;
-		}
+public class Caterpie extends PokemonAr {
+		private int nivel;
+		private String dono;
 		
-		
-		public String imprimir()
+		public Caterpie(String nome, double vida, double ataque, double defesa, double velocidade, double peso,
+				double altura, double xpMin, double xpMax, String tipo, int nivel, String dono) 
 		{
-			return "Nome: "+super.getNome()+"\nIdade: "+super.getIdade()
-			+"\nEle emito o seguinte som: "+super.getEmitirSom()
-			+"\nEle se movimenta: "+this.getAcao();
+			super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax, tipo);
+			this.nivel = nivel;
+			this.dono = dono;
+		}
+
+		public int getNivel() {
+			return nivel;
+		}
+
+		public void setNivel(int nivel) {
+			this.nivel = nivel;
+		}
+
+		public String getDono() {
+			return dono;
+		}
+
+		public void setDono(String dono) {
+			this.dono = dono;
 		}
 
 }
