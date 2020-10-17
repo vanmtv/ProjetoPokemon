@@ -6,6 +6,9 @@ public class TestPokemon {
 		
 		Pokemon pok = new Pokemon("seila", 100, 10, 10, 10, 20, 1.2, 0, 1000);
 		
+		Pokemon fada = new PokemonFada("igly", 100, 10, 10, 10, 20, 1.2, 0, 1000, "fada");
+		
+		fada.imprimirInfo();
 		pok.imprimirInfo();
 	}
 }
