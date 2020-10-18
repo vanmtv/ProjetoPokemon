@@ -1,18 +1,22 @@
 package Rpg;
 
-public class PokemonPlanta extends Pokemon{
+public class PokemonAgua extends Pokemon {
 	private String tipo;
 
-	public PokemonPlanta(String nome, double vida, double ataque, double defesa, double velocidade, double peso,
+	public PokemonAgua(String nome, double vida, double ataque, double defesa, double velocidade, double peso,
 			double altura, double xpMin, double xpMax, String tipo) {
 		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax);
 		this.tipo = tipo;
 	}
-	public boolean validarTipo(String tipo) 
+	
+	public boolean ValidarTipo (String tipo)
 	{
-		if (tipo=="planta") {
+		if (tipo=="agua") 
+		{
 			return true;
-		}else {
+		}
+		else 
+		{
 			return false;
 		}
 	}
@@ -24,4 +28,7 @@ public class PokemonPlanta extends Pokemon{
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	
+
 }
