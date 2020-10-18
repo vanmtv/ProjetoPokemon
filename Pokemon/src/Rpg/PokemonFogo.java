@@ -1,9 +1,9 @@
 package Rpg;
 
-public class TipoFogo extends  Pokemon{
+public class PokemonFogo extends  Pokemon{
 	 private String tipo = "fogo";
 
-	public TipoFogo(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax) {
+	public PokemonFogo(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax) {
 		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax);
 	}
 

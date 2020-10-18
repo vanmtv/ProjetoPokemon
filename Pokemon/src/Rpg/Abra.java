@@ -16,8 +16,7 @@ public class Abra extends PokemonPsiquico {
 				19.5, // peso
 				0.9, // altura
 				0, // xpMIn - escluir
-				100,
-				"Abra"
+				100
 		);
 		this.dono=dono;
 	}

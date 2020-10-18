@@ -35,6 +35,7 @@ public class TestPokemon {
 		
 		*/
 		
+		/*
 
 		pokeFogo.imprimirInfo();
 		pokeFogo.recebeXp(50);
@@ -43,10 +44,10 @@ public class TestPokemon {
 		pokeFogo.imprimirInfo();
 		pokeFogo.recebeXp(200);
 		pokeFogo.imprimirInfo();
-		
+		*/
 	
 		
-		/*
+		
 		
 		System.out.println( pokeFogo.validarTipo("agua") );
 		System.out.println( pokeFogo.validarTipo("fogo") );
@@ -56,7 +57,7 @@ public class TestPokemon {
 		
 		pokeFogo.recebeDano(100);
 		pokeFogo.recebeDano(5);
-		*/
+		
 		
 	}
 }

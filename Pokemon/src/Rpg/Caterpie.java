@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Caterpie extends PokemonAr {
+public class Caterpie extends PokemonAr { // não é prokemon de aar é pokemon do tipo inseto
 	private int nivel = 0;
 	private String dono;
 	private String[] nomes = {"Caterpie","Metapod","Butterfree"};
@@ -16,8 +16,7 @@ public class Caterpie extends PokemonAr {
 				2.9, // peso
 				0.3, // altura
 				0, // xpMIn - escluir
-				100,
-				"Caterpie"
+				100
 		);
 		this.dono=dono;
 	}

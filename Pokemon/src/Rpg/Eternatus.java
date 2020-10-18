@@ -16,8 +16,8 @@ public class Eternatus extends PokemonVenenoso{
 				950, // peso
 				20, // altura
 				0, // xpMIn - escluir
-				300,
-				"Eternatus");
+				300
+			);
 		this.dono=dono;
 		
 	}
@@ -79,26 +79,12 @@ public class Eternatus extends PokemonVenenoso{
 	
 	private double rand(double i, double j) {
 		return  (i) - ( Math.random() * (j) );
-		}
-		private String tipo;
-	public Eternatus(String nome, double vida, double ataque, double defesa, double velocidade, double peso,
-			double altura, double xpMin, double xpMax, String tipo, int nivel, String tipo2) {
-		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax, tipo);
-		this.nivel1 = nivel;
-		tipo = tipo2;
 	}
 	public int getNivel() {
 		return nivel1;
 	}
 	public void setNivel(int nivel) {
 		this.nivel1 = nivel;
-	}
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-
 	}
 
 }

@@ -16,8 +16,7 @@ public class Squirtle extends PokemonAgua {
 				0.9, // peso
 				0.5, // altura
 				0, // xpMIn - escluir
-				100,
-				"Squirtle"
+				100
 		);
 		this.dono=dono;
 	}

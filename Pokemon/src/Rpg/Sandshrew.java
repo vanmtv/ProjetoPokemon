@@ -16,8 +16,7 @@ public class Sandshrew extends PokemonTerra {
 				12, // peso
 				0.6, // altura
 				0, // xpMIn - escluir
-				100,
-				"Sandshrew"
+				100
 		);
 		this.dono=dono;
 	}

@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Charmander extends TipoFogo {
+public class Charmander extends PokemonFogo {
 	private int nivel = 0;
 	private String dono;
 	private double ataqueEspecial = 60;

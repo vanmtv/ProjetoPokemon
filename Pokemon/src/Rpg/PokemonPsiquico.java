@@ -1,24 +1,26 @@
 package Rpg;
 
 public class PokemonPsiquico extends Pokemon {
-	private String tipo;
+	private String tipo = "psiquitico";
 
 	public PokemonPsiquico(String nome, double vida, double ataque, double defesa, double velocidade, double peso,
-			double altura, double xpMin, double xpMax, String tipo) {
+			double altura, double xpMin, double xpMax) {
 		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax);
+
+	}
+	
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 	
-	public boolean ValidarTipo (String tipo)
-	{
-		if (tipo=="psiquico") 
-		{
-			return true;
-		}
-		else 
-		{
-			return false;
-		}
+	public  double validarTipo(String tipo) {
+		   if( (tipo=="inseto") || (tipo == "fantasama") || (tipo == "sombrio")) 
+			   return  0.5;
+		   return 4;
 	}
 
 }

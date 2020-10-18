@@ -16,8 +16,7 @@ public class Diglett extends PokemonTerra {
 				0.8, // peso
 				0.2, // altura
 				0, // xpMIn - escluir
-				100,
-				"Diglett"
+				100
 		);
 		this.dono=dono;
 	}
