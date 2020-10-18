@@ -1,23 +1,23 @@
 package Rpg;
 
-public class Caterpie extends PokemonAr {
+public class Abra extends PokemonPsiquico {
 	private int nivel = 0;
 	private String dono;
-	private String[] nomes = {"Caterpie","Metapod","Butterfree"};
+	private String[] nomes = {"Abra","Kadabra","Alakazam"};
 	
-	public Caterpie(String dono) 
+	public Abra(String dono) 
 	{
 		super( 
-				"Caterpie",
-				113, // vida
-				55, // ataque
-				55,  // defesa
+				"Abra",
+				85, // vida
+				195, // ataque
+				82,  // defesa
 				0, // velocidade
-				2.9, // peso
-				0.3, // altura
+				19.5, // peso
+				0.9, // altura
 				0, // xpMIn - escluir
 				100,
-				"Caterpie"
+				"Abra"
 		);
 		this.dono=dono;
 	}
@@ -52,18 +52,19 @@ public class Caterpie extends PokemonAr {
 		this.setNome(nomes[nivel]);
 		switch(nivel) {
 		case 1:
-			this.setVida(120);
-			this.setAtaque(45);
-			this.setDefesa(80);
-			this.setAltura(0.7);
-			this.setPeso(9.9);
+			this.setVida(106);
+			this.setAtaque(232);
+			this.setDefesa(117);
+			this.setAltura(1.3);
+			this.setPeso(56.5);
 		break;
 		case 2:
-			this.setVida(134);
-			this.setAtaque(167);
-			this.setDefesa(137);
-			this.setAltura(1.1);
-			this.setPeso(32);
+			this.setVida(127);
+			this.setAtaque(271);
+			this.setDefesa(167);
+			this.setAltura(1.5);
+			this.setPeso(48);
+		break;
 		}
 	}
 	
@@ -89,5 +90,5 @@ public class Caterpie extends PokemonAr {
 	private double rand(double i, double j) {
 		return  (i) - ( Math.random() * (j) );
 	}
-	
+
 }
