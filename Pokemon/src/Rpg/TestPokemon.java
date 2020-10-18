@@ -1,8 +1,8 @@
 package Rpg;
 
 public class TestPokemon {
-	public static void main(String args[]) {
-		System.out.println("Init");
+	//public static void main(String args[]) {
+		//System.out.println("Init");
 		
 		/*
 		Pokemon pok = new Pokemon("seila", 100, 10, 10, 10, 20, 1.2, 0, 1000);
@@ -49,15 +49,15 @@ public class TestPokemon {
 		
 		
 		
-		System.out.println( pokeFogo.validarTipo("agua") );
-		System.out.println( pokeFogo.validarTipo("fogo") );
+		//System.out.println( pokeFogo.validarTipo("agua") );
+		//System.out.println( pokeFogo.validarTipo("fogo") );
 		
-		System.out.println( pokeFogo.ataque("agua") );
-		
-		
-		pokeFogo.recebeDano(100);
-		pokeFogo.recebeDano(5);
+		//System.out.println( pokeFogo.ataque("agua") );
 		
 		
-	}
+		//pokeFogo.recebeDano(100);
+		//pokeFogo.recebeDano(5);
+		
+		
+	//}
 }

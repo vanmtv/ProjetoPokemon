@@ -19,6 +19,13 @@ public class PokemonVenenoso extends Pokemon{
 		this.tipo = tipo;
 	}
 	
+	/*
+	public  double validarTipo(String tipo) {
+		   if( (tipo=="psiquico") || (tipo == "terra") ) 
+			   return  0.5;
+		   return 4;
+	}
+	*/
 	public  double validarTipo(String tipo) {
 		   if( (tipo=="psiquico") || (tipo == "terra") ) 
 			   return  0.5;

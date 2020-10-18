@@ -1,7 +1,7 @@
 package Rpg;
 
 public class TestAll {
-	public static void main(String args[]) {
+	//public static void main(String args[]) {
 		/* Eternatus sucesso
 		Eternatus  newEternatus = new Eternatus("caio");
 		
@@ -102,5 +102,5 @@ public class TestAll {
 		*/
 		
 		
-	}
+	//}
 }

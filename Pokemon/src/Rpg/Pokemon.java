@@ -27,6 +27,7 @@ public class Pokemon {
 		
 		System.out.println(
 				"nome:"+this.getNome()+", "
+				+"vida"+this.getVida()+","
 			    +"peso:"+this.getPeso()+"Kg, "
 			    +"Altura:"+this.getAltura()+"M, "
 			    +"ataque:"+this.getAtaque()+", "
@@ -90,5 +91,14 @@ public class Pokemon {
 	}
 	public void setDefesa(double defesa) {
 		this.defesa = defesa;
+	}
+	
+	public void recebeDano(double dano) {
+		if( (this.getVida() - dano) > 0) {
+			this.setVida( this.getVida()  - dano );
+		}else { 
+			this.setVida(0);
+			System.out.println("O pokémon "+this.getNome()+" morreu.");
+		}
 	}
 }
