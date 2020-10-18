@@ -2,6 +2,7 @@ package Rpg;
 
 public class Diglett extends PokemonTerra {
 	private int nivel = 0;
+	private double ataqueEspecial = 35;
 	private String dono;
 	private String[] nomes = {"Diglett","Dugtrio"};
 	
@@ -59,6 +60,23 @@ public class Diglett extends PokemonTerra {
 			this.setPeso(33.3);
 		break;
 		}
+	}
+	
+	public double ataque(String tipo){
+		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
+	}
+	
+	public void recebeDano(double dano) {
+		if( (this.getVida() - dano) > 0) {
+			this.setVida( this.getVida()  - dano );
+		}else { 
+			this.setVida(0);
+			System.out.println("O pokémon "+this.getNome()+" morreu.");
+		}
+	}
+	
+	private double rand(double i, double j) {
+		return  (i) - ( Math.random() * (j) );
 	}
 
 }

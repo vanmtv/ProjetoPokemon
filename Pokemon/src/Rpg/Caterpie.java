@@ -2,6 +2,7 @@ package Rpg;
 
 public class Caterpie extends PokemonAr { // não é prokemon de aar é pokemon do tipo inseto
 	private int nivel = 0;
+	private double ataqueEspecial = 20;
 	private String dono;
 	private String[] nomes = {"Caterpie","Metapod","Butterfree"};
 	
@@ -66,27 +67,20 @@ public class Caterpie extends PokemonAr { // não é prokemon de aar é pokemon do 
 		}
 	}
 	
-	public double ataque(){
-		return this.rand(this.getAtaque(), this.getAtaque() );
-	}
-	
-	public double defesa(){
-		return this.rand(this.getDefesa(), this.getDefesa() );
+	public double ataque(String tipo){
+		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
 	
 	public void recebeDano(double dano) {
-		double newDano = this.defesa() - dano; 
-		if( newDano>0 ) {
-			this.setVida( this.getVida()  - ( newDano ) );
-		}
-		else {
-			System.out.println("O pokémon "+this.getNome()+" não recebeu nenhum dano!");
+		if( (this.getVida() - dano) > 0) {
+			this.setVida( this.getVida()  - dano );
+		}else { 
+			this.setVida(0);
+			System.out.println("O pokémon "+this.getNome()+" morreu.");
 		}
 	}
-	
 	
 	private double rand(double i, double j) {
 		return  (i) - ( Math.random() * (j) );
 	}
-	
 }
