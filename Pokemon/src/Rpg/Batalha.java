@@ -1,4 +1,4 @@
-package ProjetoPokemon;
+package Rpg;
 
 import java.util.Scanner;
 
