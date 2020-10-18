@@ -41,58 +41,56 @@ public class Main {
 		
 		List<Pokemon> jogadores = List.of(pokemons.get(opcao-1), inimigos.get(rand(0,6)));
 		
-		/* 
-		int escolha;
         do {
-		System.out.println(nome +"Desejar visualizar as informações do Pokemon ou batalhar? "
-				+ "1 para ver 2 para duelar");
-		escolha = leia.nextInt();
+		System.out.println("\n"+nome +", desejar visualizar as informações do Pokemon ou batalhar? "
+				+ "\n (1) para ver \n (2) para duelar \n (3) sair do jogo ");
+		System.out.print("Escolhe uma opção:");
+		opcao = leia.nextInt();
 	
-		   switch(escolha)
+		   switch(opcao)
 	 	   {
 		    case 1:
-			//Dados do Poke;
+		    	jogadores.get(1).imprimirInfo();
 			break;
 		    case 2:
-			//batalha;
+		    	
+		    	//batalha
+				do {
+					partida++;
+					
+					if(partida%2 == 0) {
+					   do{
+					  
+						 System.out.print("\nO jogador: "+nome+"\n ( 1 ) Ataca \n ( 2 ) Fugi ");
+						 System.out.print("\nEscolhe uma opção:");
+						 opcao = leia.nextInt();
+						 System.out.print("\n");
+						 
+						 if(opcao!=1 && opcao!=2)
+						   System.out.println("\nOpção inválida!\n");
+						 
+					   }while(opcao!=1 && opcao!=2);
+					}
+					
+					if( opcao == 1) {
+						jogadores.get(partida%2).recebeDano(rand(1,100));
+						System.out.println( jogadores.get(partida%2).getNome() +" : "+ jogadores.get(partida%2).getVida()+"Hp ");
+					}
+					
+				}while( (jogadores.get(partida%2).getVida() > 0 ) &&  (opcao==1) ); 
+				
+				
+				if(jogadores.get(partida%2).getVida() == 0 ) {
+					if(partida%2 == 0) 
+						System.out.println("O seu pokémon '"+jogadores.get(partida%2).getNome()+"' morreu!");
+					else
+						System.out.println("O pokémon inimigo '"+jogadores.get(partida%2).getNome()+"' morreu!");
+				}
+		    	
 			break;
 		 }
-	    } while(opcao!=1 && opcao!=2 && opcao!=3 );
-		*/
-		
-		//batalha
-		do {
-			
-			/* usuario escolhe entre ataque ou fugi
-			if(partida%2 == 0) {
-			   do{
-			  
-				 System.out.print("O jogador: "+nome+" (1)ataca \n (2)fugi");
-				 System.out.print("Escolhe uma opção:");
-				 opcao = leia.nextInt();
-				 
-				 if(opcao!=1 && opcao!=2)
-				   System.out.println("\nOpção inválida!\n");
-				 
-			   }while(opcao!=1 && opcao!=2);
-			}
-			else{
-				
-			}
-			*/
-			partida++;
-			jogadores.get(partida%2).recebeDano(10);
-			System.out.println(jogadores.get(partida%2).getVida());
-			
-			
-		}while( (jogadores.get(partida%2).getVida() > 0 ));
-		
-		
-
-		//System.out.println(pokemons.get(opcao-1).getNome());
-		//System.out.println(inimigos.get(rand(0,6)).getNome());
-				
-		
+		 
+	    } while( opcao!=3 && !(jogadores.get(partida%2).getVida() == 0 ) );
 		
 	}
 }

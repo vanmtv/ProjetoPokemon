@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Sandshrew extends PokemonTerra {
+public class Sandshrew extends Pokemon {
 	private int nivel = 0;
 	private double ataqueEspecial = 20;
 	private String dono;
@@ -17,7 +17,8 @@ public class Sandshrew extends PokemonTerra {
 				12, // peso
 				0.6, // altura
 				0, // xpMIn - escluir
-				100
+				100,
+				"terra"
 		);
 		this.dono=dono;
 	}
@@ -62,9 +63,11 @@ public class Sandshrew extends PokemonTerra {
 		}
 	}
 	
+	/*
 	public double ataque(String tipo){
 		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
+	*/
 	
 	public void recebeDano(double dano) {
 		if( (this.getVida() - dano) > 0) {

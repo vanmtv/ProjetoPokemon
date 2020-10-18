@@ -10,8 +10,9 @@ public class Pokemon {
 	private double defesa;
 	private double xpMin;
 	private double xpMax;
-	
-	public Pokemon(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax) {
+	private String tipo;
+
+	public Pokemon(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax, String tipo) {
 		this.setNome(nome);
 		this.setVida(vida);
 		this.setAtaque(ataque);
@@ -21,18 +22,20 @@ public class Pokemon {
 		this.setAltura(altura);
 		this.setXpMin(xpMin);
 		this.setXpMax(xpMax);
+		this.setTipo(tipo);
 	}
 	
 	public void imprimirInfo(){
 		
 		System.out.println(
-				"nome:"+this.getNome()+", "
-				+"vida"+this.getVida()+","
-			    +"peso:"+this.getPeso()+"Kg, "
-			    +"Altura:"+this.getAltura()+"M, "
-			    +"ataque:"+this.getAtaque()+", "
-			    +"defesa:"+this.getDefesa()+", "
-			    +"Velocidade:"+this.getVelocidade()
+				"nome: "+this.getNome()+", "
+				+"tipo:"+this.getTipo()+", "
+				+"vida "+this.getVida()+", "
+			    +"peso: "+this.getPeso()+"Kg, "
+			    +"Altura: "+this.getAltura()+"M, "
+			    +"ataque: "+this.getAtaque()+", "
+			    +"defesa: "+this.getDefesa()+", "
+			    +"Velocidade: "+this.getVelocidade()
 		);
 
 	}
@@ -92,13 +95,19 @@ public class Pokemon {
 	public void setDefesa(double defesa) {
 		this.defesa = defesa;
 	}
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 	
 	public void recebeDano(double dano) {
 		if( (this.getVida() - dano) > 0) {
 			this.setVida( this.getVida()  - dano );
 		}else { 
 			this.setVida(0);
-			System.out.println("O pokémon "+this.getNome()+" morreu.");
 		}
 	}
 }
