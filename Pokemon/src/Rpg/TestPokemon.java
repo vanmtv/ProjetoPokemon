@@ -16,8 +16,9 @@ public class TestPokemon {
 		tipoAr.imprimirInfo();
 		*/
 		
-		Charmander pokeFogo = new Charmander(" caio ");
+		Charmander pokeFogo = new Charmander("caio");
 		
+		/*
 
 		pokeFogo.imprimirInfo();
 		pokeFogo.involuir(1);
@@ -32,10 +33,10 @@ public class TestPokemon {
 		
 		System.out.println( pokeFogo.defesa() );
 		
+		*/
 		
-		
-		/* mostrar 2
-		 * 		pokeFogo.imprimirInfo();
+
+		pokeFogo.imprimirInfo();
 		pokeFogo.recebeXp(50);
 		pokeFogo.imprimirInfo();
 		pokeFogo.recebeXp(200);
@@ -43,6 +44,18 @@ public class TestPokemon {
 		pokeFogo.recebeXp(200);
 		pokeFogo.imprimirInfo();
 		
+	
+		
+		/*
+		
+		System.out.println( pokeFogo.validarTipo("agua") );
+		System.out.println( pokeFogo.validarTipo("fogo") );
+		
+		System.out.println( pokeFogo.ataque("agua") );
+		
+		
+		pokeFogo.recebeDano(100);
+		pokeFogo.recebeDano(5);
 		*/
 		
 	}

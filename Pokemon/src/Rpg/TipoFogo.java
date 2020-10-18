@@ -1,11 +1,10 @@
 package Rpg;
 
 public class TipoFogo extends  Pokemon{
-	String tipo;
+	 private String tipo = "fogo";
 
-	public TipoFogo(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax, String tipo) {
+	public TipoFogo(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax) {
 		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax);
-		this.tipo = tipo;
 	}
 
 	public String getTipo() {
@@ -16,11 +15,9 @@ public class TipoFogo extends  Pokemon{
 		this.tipo = tipo;
 	}
 
-	public  int validarTipo(String tipo) {
-		if (tipo=="fogo") {
-			return 1;
-		}else {
-			return 0;
-		}
+	public  double validarTipo(String tipo) {
+	   if( (tipo=="agua") || (tipo == "terra") || ( tipo == "pedra") ) 
+		   return  0.5;
+	   return 4;
 	}
 }
