@@ -10,6 +10,9 @@ public class TestPokemon {
 		TipoPlanta tipoPlanta = new TipoPlanta("pokemon de planta", 100, 10, 10, 10, 20, 1.2, 0, 1000,"planta");
 		TipoAr tipoAr = new TipoAr("pokemon de Ar", 100, 10, 10, 10, 20, 1.2, 0, 1000,"Ar");
 		
+		Pokemon fada = new PokemonFada("igly", 100, 10, 10, 10, 20, 1.2, 0, 1000, "fada");
+		
+		fada.imprimirInfo();
 		pok.imprimirInfo();
 		tipoFogo.imprimirInfo();
 		tipoPlanta.imprimirInfo();

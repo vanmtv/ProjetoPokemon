@@ -4,8 +4,8 @@ public class Bulbasaur extends PokemonPlanta{
 	private int nivel;
 	private String dono;
 	
-	public Bulbasaur(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax) {
-		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax);
+	public Bulbasaur(String nome, double vida, double ataque, double defesa, double velocidade, double peso, double altura, double xpMin, double xpMax, int nivel, String dono, String tipo) {
+		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax, tipo);
 		this.nivel = nivel;
 		this.dono = dono;
 	}
@@ -15,7 +15,6 @@ public class Bulbasaur extends PokemonPlanta{
 		//recebe XP
 		//modifica String nome;
 	}
-
 
 	public int getNivel() {
 		return nivel;
