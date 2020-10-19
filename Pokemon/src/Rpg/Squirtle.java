@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Squirtle extends Pokemon {
+public class Squirtle extends PokemonAgua {
 	private int nivel = 0;
 	private double ataqueEspecial = 50;
 	private String dono;
@@ -17,9 +17,7 @@ public class Squirtle extends Pokemon {
 				0.9, // peso
 				0.5, // altura
 				0, // xpMIn - escluir
-				100,
-				"agua"
-				
+				100
 		);
 		this.dono=dono;
 	}
@@ -71,11 +69,9 @@ public class Squirtle extends Pokemon {
 		}
 	}
 	
-	/*
 	public double ataque(String tipo){
 		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
-	*/
 	
 	
 	public void recebeDano(double dano) {

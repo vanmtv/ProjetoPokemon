@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Charmander extends Pokemon {
+public class Charmander extends PokemonFogo {
 	private int nivel = 0;
 	private String dono;
 	private double ataqueEspecial = 60;
@@ -16,8 +16,7 @@ public class Charmander extends Pokemon {
 				8.5, // peso
 				0.6, // altura
 				0, // xpMin - escluir.
-				100, //xpMax
-				"fogo"
+				100 //xpMax
 		);
 		this.dono=dono;
 	}
@@ -68,11 +67,18 @@ public class Charmander extends Pokemon {
 		}
 	}
 	
-	/*
+	public void recebeDano(double dano) {
+		if( (this.getVida() - dano) > 0) {
+			this.setVida( this.getVida()  - dano );
+		}else { 
+			this.setVida(0);
+		}
+	}
+
 	public double ataque(String tipo){
 		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
-	*/
+	
 	
 	
 	private double rand(double i, double j) {

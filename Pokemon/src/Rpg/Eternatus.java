@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Eternatus extends Pokemon{ // pokémon lendario
+public class Eternatus extends PokemonVenenoso{ // pokémon lendario
 	private int nivel1;
 	private double  ataqueEspecial = 145;
 	private String dono;
@@ -16,8 +16,7 @@ public class Eternatus extends Pokemon{ // pokémon lendario
 				950, // peso
 				20, // altura
 				0, // xpMIn - escluir
-				100,
-				"venenoso"
+				100
 			);
 		this.dono=dono;
 		
@@ -59,18 +58,15 @@ public class Eternatus extends Pokemon{ // pokémon lendario
 		}
 	}
 	
-	/*
 	public double ataque(String tipo){
 		return (((((20*(this.getNivel1()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
-	*/
-	
+
 	public void recebeDano(double dano) {
 		if( (this.getVida() - dano) > 0) {
 			this.setVida( this.getVida()  - dano );
 		}else { 
 			this.setVida(0);
-			System.out.println("O pokémon "+this.getNome()+" morreu.");
 		}
 	}
 	

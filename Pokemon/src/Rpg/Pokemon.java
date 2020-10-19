@@ -103,11 +103,18 @@ public class Pokemon {
 		this.tipo = tipo;
 	}
 	
+	// bug do Eclipse
 	public void recebeDano(double dano) {
-		if( (this.getVida() - dano) > 0) {
-			this.setVida( this.getVida()  - dano );
-		}else { 
-			this.setVida(0);
-		}
 	}
+	
+	public void involuir(int nivel) {
+	}
+	
+	double ataque(final String tipo){
+		return 0.1;
+	}
+
+	public void recebeXp(int xp){
+	}
+		
 }

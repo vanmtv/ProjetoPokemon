@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Abra extends Pokemon {
+public class Abra extends PokemonPsiquico {
 	private int nivel = 0;
 	private double ataqueEspecial =105;
 	private String dono;
@@ -17,8 +17,7 @@ public class Abra extends Pokemon {
 				19.5, // peso
 				0.9, // altura
 				0, // xpMIn - escluir
-				100,
-				"psiquico"
+				100
 		);
 		this.dono=dono;
 	}

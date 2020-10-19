@@ -73,7 +73,7 @@ public class Main {
 					}
 					
 					if( opcao == 1) {
-						jogadores.get(partida%2).recebeDano(rand(1,100));
+						jogadores.get(partida%2).recebeDano( jogadores.get((partida-1)%2).ataque(jogadores.get(partida%2).getTipo() ) );
 						System.out.println( jogadores.get(partida%2).getNome() +" : "+ jogadores.get(partida%2).getVida()+"Hp ");
 					}
 					
@@ -90,7 +90,17 @@ public class Main {
 			break;
 		 }
 		 
-	    } while( opcao!=3 && !(jogadores.get((partida+1)%2).getVida() == 0 ) );
+	    } while( opcao!=3 && !(jogadores.get(partida%2).getVida() == 0 ) );
+        
+        
+        /*
+        jogadores.get(partida%2).involuir(1);
+        
+        System.out.println(jogadores.get(0).ataque("fogo"));
+        
+        jogadores.get(partida%2).imprimirInfo();
+        */
+        
 		
 	}
 }

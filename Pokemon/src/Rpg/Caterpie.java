@@ -1,6 +1,6 @@
 package Rpg;
 
-public class Caterpie extends Pokemon { // não é prokemon de aar é pokemon do tipo inseto
+public class Caterpie extends PokemonAr { // não é prokemon de aar é pokemon do tipo inseto
 	private int nivel = 0;
 	private double ataqueEspecial = 20;
 	private String dono;
@@ -17,8 +17,7 @@ public class Caterpie extends Pokemon { // não é prokemon de aar é pokemon do ti
 				2.9, // peso
 				0.3, // altura
 				0, // xpMIn - escluir
-				100,
-				"ar"
+				100
 		);
 		this.dono=dono;
 	}
@@ -68,18 +67,16 @@ public class Caterpie extends Pokemon { // não é prokemon de aar é pokemon do ti
 		}
 	}
 	
-	/*
+
 	public double ataque(String tipo){
 		return (((((20*(this.getNivel()+1) )/7)*this.getAtaque()*this.ataqueEspecial/this.getDefesa())/50)+2)*(1.5)*this.validarTipo(tipo)*(1*(this.rand(1, 0.15)));
 	}
-	*/
-	
+
 	public void recebeDano(double dano) {
 		if( (this.getVida() - dano) > 0) {
 			this.setVida( this.getVida()  - dano );
 		}else { 
 			this.setVida(0);
-			System.out.println("O pokémon "+this.getNome()+" morreu.");
 		}
 	}
 	
