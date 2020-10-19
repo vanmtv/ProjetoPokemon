@@ -1,4 +1,4 @@
-# **ProjetoPokemon**
+# **Projeto Pokemon**
 
 ## ***Olá! Bem-vindos ao Projeto Pokémon!***
 Aqui você vai poder batalhar com alguns dos Pokémons oficiais. 
