@@ -12,7 +12,7 @@ public class Main {
 	
 	public static void main(String args[]) {
 		String nome;
-		int opcao, partida = -1;
+		int opcao, partida = 1;
 		Scanner leia = new Scanner(System.in);
 		
 		Charmander charmander = new Charmander("");
@@ -90,7 +90,7 @@ public class Main {
 			break;
 		 }
 		 
-	    } while( opcao!=3 && !(jogadores.get(partida%2).getVida() == 0 ) );
+	    } while( opcao!=3 && !(jogadores.get((partida+1)%2).getVida() == 0 ) );
 		
 	}
 }
