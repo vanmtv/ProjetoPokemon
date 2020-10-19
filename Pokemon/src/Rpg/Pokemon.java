@@ -113,6 +113,10 @@ public class Pokemon {
 	double ataque(final String tipo){
 		return 0.1;
 	}
+	
+    String ultimaForma() {
+    	return "";
+	}
 
 	public void recebeXp(int xp){
 	}

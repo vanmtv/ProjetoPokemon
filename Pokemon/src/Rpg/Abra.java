@@ -81,7 +81,6 @@ public class Abra extends PokemonPsiquico {
 			this.setVida( this.getVida()  - dano );
 		}else { 
 			this.setVida(0);
-			System.out.println("O pokémon "+this.getNome()+" morreu.");
 		}
 	}
 	

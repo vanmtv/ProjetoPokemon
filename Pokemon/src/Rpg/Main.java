@@ -12,12 +12,16 @@ public class Main {
 	
 	public static void main(String args[]) {
 		String nome;
-		int opcao, partida = 1;
+		int opcao, partida = 1, inimigo;
 		Scanner leia = new Scanner(System.in);
 		
+		//pokemons
 		Charmander charmander = new Charmander("");
 		Sandshrew  sandshrew = new Sandshrew("");
 		Caterpie caterpie = new Caterpie("");
+		Charmander charmander2 = new Charmander("");
+		Sandshrew  sandshrew2 = new Sandshrew("");
+		Caterpie caterpie2 = new Caterpie("");
 		Diglett diglett = new Diglett ("");
 		Eternatus eternatus = new Eternatus ("");
 		Abra abra = new Abra ("");
@@ -25,7 +29,7 @@ public class Main {
 		
 		List<Pokemon> pokemons =List.of(charmander,sandshrew,caterpie);
 		
-		List<Pokemon> inimigos = List.of(sandshrew,diglett,eternatus,abra,squirtle,charmander,caterpie);
+		//List<Pokemon> inimigos = List.of(sandshrew,diglett,eternatus,abra,squirtle,charmander,caterpie);
 		
 		System.out.print("Digite o seu nome:");
 		nome = leia.nextLine();
@@ -39,26 +43,37 @@ public class Main {
 				   System.out.println("\nOpção inválida!\n");
 		} while(opcao!=1 && opcao!=2 && opcao!=3 );
 		
-		List<Pokemon> jogadores = List.of(pokemons.get(opcao-1), inimigos.get(rand(0,6)));
+		List<Pokemon> jogadores = List.of(pokemons.get(opcao-1), sandshrew2, diglett, eternatus, abra, squirtle, charmander2, caterpie2);		
+		inimigo = rand(2,7);
 		
         do {
-		System.out.println("\n"+nome +", desejar visualizar as informações do Pokemon ou batalhar? "
-				+ "\n (1) para ver \n (2) para duelar \n (3) sair do jogo ");
-		System.out.print("Escolhe uma opção:");
-		opcao = leia.nextInt();
+        	System.out.println("\n"+nome +", desejar visualizar as informações do Pokemon ou batalhar? "
+				+ "\n (1) para visualizar seu pokémon \n (2) para visualizar seu inimigo \n (3) escolher outro inimigo  \n (4) para duelar \n (5) sair do jogo ");
+        	System.out.print("Escolhe uma opção:");
+        	opcao = leia.nextInt();
 	
 		   switch(opcao)
 	 	   {
 		    case 1:
-		    	jogadores.get(1).imprimirInfo();
+		    	jogadores.get(0).imprimirInfo();
 			break;
 		    case 2:
+		    	jogadores.get(inimigo).imprimirInfo();
+		    break;
+		    case 3:
+		  	  do{
+				   inimigo = rand(2,7);
+				   if(  jogadores.get(inimigo).getVida() >0  ) 
+					   break;
+			  }while(true);
+		    break;
+		    case 4:
 		    	
 		    	//batalha
 				do {
 					partida++;
 					
-					if(partida%2 == 0) {
+					if(partida%2*inimigo == 0) {
 					   do{
 					  
 						 System.out.print("\nO jogador: "+nome+"\n ( 1 ) Ataca \n ( 2 ) Fugi ");
@@ -73,33 +88,34 @@ public class Main {
 					}
 					
 					if( opcao == 1) {
-						jogadores.get(partida%2).recebeDano( jogadores.get((partida-1)%2).ataque(jogadores.get(partida%2).getTipo() ) );
-						System.out.println( jogadores.get(partida%2).getNome() +" : "+ jogadores.get(partida%2).getVida()+"Hp ");
+						jogadores.get(partida%2*inimigo).recebeDano( jogadores.get((partida-1)%2*inimigo).ataque(jogadores.get(partida%2*inimigo).getTipo() ) );
+						System.out.println( jogadores.get(partida%2*inimigo).getNome() +" : "+ jogadores.get(partida%2*inimigo).getVida()+"Hp ");
 					}
 					
-				}while( (jogadores.get(partida%2).getVida() > 0 ) &&  (opcao==1) ); 
+				}while( (jogadores.get(partida%2*inimigo).getVida() > 0 ) &&  (opcao==1) ); 
 				
 				
-				if(jogadores.get(partida%2).getVida() == 0 ) {
+				if(jogadores.get(partida%2*inimigo).getVida() == 0 ) {
 					if(partida%2 == 0) 
-						System.out.println("O seu pokémon '"+jogadores.get(partida%2).getNome()+"' morreu!");
+						System.out.println("O seu pokémon '"+jogadores.get(partida%2).getNome()+"' desmaiou!");
 					else
-						System.out.println("O pokémon inimigo '"+jogadores.get(partida%2).getNome()+"' morreu!");
+						System.out.println("O pokémon inimigo '"+jogadores.get(partida%2*inimigo).getNome()+"' desmaiou!");
 				}
 		    	
 			break;
 		 }
-		 
-	    } while( opcao!=3 && !(jogadores.get(partida%2).getVida() == 0 ) );
-        
-        
-        /*
-        jogadores.get(partida%2).involuir(1);
-        
-        System.out.println(jogadores.get(0).ataque("fogo"));
-        
-        jogadores.get(partida%2).imprimirInfo();
-        */
+		   
+		   if(jogadores.get(inimigo).getVida() == 0 ) { // tocar de inimigo// lop infinito.
+			  jogadores.get(0).recebeXp(100); //involuir o pokémon do jogador[0]
+			  System.out.println("Parabénz "+nome+", o seu pokémon evoluir para "+jogadores.get(0).getNome());
+			  do{
+				   inimigo = rand(2,7);
+				   if(  jogadores.get(inimigo).getVida() >0  ) 
+					   break;
+			  }while(true);
+		   }
+		   
+	    } while( opcao!=5 && !(jogadores.get(0).getVida() == 0 )  && !(jogadores.get(0).ultimaForma() == jogadores.get(0).getNome()) );
         
 		
 	}
