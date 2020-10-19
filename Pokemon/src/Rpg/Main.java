@@ -76,7 +76,7 @@ public class Main {
 					if(partida%2*inimigo == 0) {
 					   do{
 					  
-						 System.out.print("\nO jogador: "+nome+"\n ( 1 ) Ataca \n ( 2 ) Fugi ");
+						 System.out.print("\nO jogador: "+nome+"\n ( 1 ) Ataca \n ( 2 ) Recuar ");
 						 System.out.print("\nEscolhe uma opção:");
 						 opcao = leia.nextInt();
 						 System.out.print("\n");
