@@ -35,7 +35,7 @@ public class Main {
 		nome = leia.nextLine();
 		
 		do {
-			System.out.println("Está "+nome+" preparado para a sua batalha? \n Para começar, escolha o seu Pokemon \n 1- Charmander \n 2- Sandshrew \n 3- Caterpie");
+			System.out.println(nome+", você está preparado para a sua batalha? \n Para começar, escolha o seu Pokemon \n 1- Charmander \n 2- Sandshrew \n 3- Caterpie");
 			System.out.print("Escolhe uma opção:");
 			opcao =leia.nextInt();
 			

@@ -84,6 +84,11 @@ public class Abra extends PokemonPsiquico {
 		}
 	}
 	
+	public String ultimaForma() {
+		return this.nomes[this.nomes.length - 1 ];
+	}
+	
+	
 	private double rand(double i, double j) {
 		return  (i) - ( Math.random() * (j) );
 	}
