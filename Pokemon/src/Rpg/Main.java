@@ -44,7 +44,7 @@ public class Main {
 		} while(opcao!=1 && opcao!=2 && opcao!=3 );
 		
 		List<Pokemon> jogadores = List.of(pokemons.get(opcao-1), sandshrew2, diglett, eternatus, abra, squirtle, charmander2, caterpie2);		
-		inimigo = rand(2,7);
+		inimigo = rand(1,8);
 		
         do {
         	System.out.println("\n"+nome +", desejar visualizar as informações do Pokemon ou batalhar? "
@@ -62,7 +62,7 @@ public class Main {
 		    break;
 		    case 3:
 		  	  do{
-				   inimigo = rand(2,7);
+				   inimigo = rand(1,8);
 				   if(  jogadores.get(inimigo).getVida() >0  ) 
 					   break;
 			  }while(true);
@@ -88,7 +88,7 @@ public class Main {
 					}
 					
 					if( opcao == 1) {
-						jogadores.get(partida%2*inimigo).recebeDano( jogadores.get((partida-1)%2*inimigo).ataque(jogadores.get(partida%2*inimigo).getTipo() ) );
+						jogadores.get((partida-1)%2*inimigo).recebeDano( jogadores.get((partida)%2*inimigo).ataque(jogadores.get(partida%2*inimigo).getTipo() ) );
 						System.out.println( jogadores.get(partida%2*inimigo).getNome() +" : "+ jogadores.get(partida%2*inimigo).getVida()+"Hp ");
 					}
 					
@@ -109,7 +109,7 @@ public class Main {
 			  jogadores.get(0).recebeXp(100); //involuir o pokémon do jogador[0]
 			  System.out.println("Parabénz "+nome+", o seu pokémon evoluir para "+jogadores.get(0).getNome());
 			  do{
-				   inimigo = rand(2,7);
+				   inimigo = rand(1,8);
 				   if(  jogadores.get(inimigo).getVida() >0  ) 
 					   break;
 			  }while(true);
