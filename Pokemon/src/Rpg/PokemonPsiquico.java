@@ -1,4 +1,4 @@
-  
+
 package Rpg;
 
 public class PokemonPsiquico extends Pokemon {
@@ -9,7 +9,7 @@ public class PokemonPsiquico extends Pokemon {
 		super(nome, vida, ataque, defesa, velocidade, peso, altura, xpMin, xpMax, "psiquico");
 
 	}
-	
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -17,11 +17,11 @@ public class PokemonPsiquico extends Pokemon {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
-	
-	public  double validarTipo(String tipo) {
-		   if( (tipo=="inseto") || (tipo == "fantasama") || (tipo == "sombrio")) 
-			   return  0.5;
-		   return 4;
+
+	public double validarTipo(String tipo) {
+		if ((tipo == "inseto") || (tipo == "fantasama") || (tipo == "sombrio"))
+			return 0.5;
+		return 4;
 	}
 
 }
