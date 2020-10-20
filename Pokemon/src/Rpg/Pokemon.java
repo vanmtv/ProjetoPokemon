@@ -52,7 +52,7 @@ public class Pokemon {
 	}
 
 	public double getVida() {
-		return vida;
+		return Math.round(vida);
 	}
 
 	public void setVida(double vida) {
