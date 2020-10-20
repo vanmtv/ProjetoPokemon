@@ -91,7 +91,7 @@ public class Main {
 
 					if (opcao == 1) {
 						jogadores.get((partida - 1) % 2 * inimigo).recebeDano(jogadores.get((partida) % 2 * inimigo)
-								.ataque(jogadores.get(partida % 2 * inimigo).getTipo()));
+								.ataque(jogadores.get((partida - 1) % 2 * inimigo).getTipo()));
 						System.out.println(jogadores.get(partida % 2 * inimigo).getNome() + " : "
 								+ jogadores.get(partida % 2 * inimigo).getVida() + "Hp ");
 					}
